@@ -19,8 +19,25 @@
             <RowDefinition Height="3*"/>
             <RowDefinition Height="3*"/>
             <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
-        <Button Content="Hello World" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBlock Text="Hello World" Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBlock x:Name="Txt_title" Text="DicoLexique"
+                   Grid.Column="0" Grid.Row="0"
+                   HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <TextBlock x:Name="Txt_question" Text="Voulez-vous activer le mode non voyant ?"
+                   Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3"
+                   HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Button x:Name="Btn_yes" Content="OUI" 
+                Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="3"
+                HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
+                Margin="20,20,20,20"/>
+        <Button x:Name="Btn_no" Content="NON" 
+                Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="3"
+                HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                Margin="20,20,20,20"/>
+        <Button x:Name="Btn_micro" Content="Microphone" 
+                Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="3"
+                HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
     </Grid>
 </Page>

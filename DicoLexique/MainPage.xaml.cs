@@ -26,5 +26,6 @@ namespace DicoLexique
         {
             this.InitializeComponent();
         }
+        
     }
 }
