@@ -26,6 +26,15 @@ namespace DicoLexique
         {
             this.InitializeComponent();
         }
-        
+
+        private void Btn_yes_Click(object sender, RoutedEventArgs e)
+        {
+            (Window.Current.Content as Frame).Navigate(typeof(Search_NV));
+        }
+
+        private void Btn_no_Click(object sender, RoutedEventArgs e)
+        {
+            (Window.Current.Content as Frame).Navigate(typeof(Search_V));
+        }
     }
 }

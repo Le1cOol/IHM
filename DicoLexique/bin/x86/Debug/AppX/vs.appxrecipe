@@ -16,7 +16,7 @@
     <PackageRegistrationPath>
     </PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
-    <RegisteredManifestChecksum>27303BAFFA13FE1FC4054F5EAEB5485329E209DAE6AAA383B081807AA7F9E48A</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>82F5728A77746EFF14AFF9E917F4F386016E3FCC6463ED8EBC05BD1F3B326BC6</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>76458f7e-ce8a-45f7-b642-986f275da546_1.0.0.0_x86__6b0k6q3wpwk4p</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>76458f7e-ce8a-45f7-b642-986f275da546_6b0k6q3wpwk4p!App</RegisteredUserModeAppID>
     <RegisteredPackageID>76458f7e-ce8a-45f7-b642-986f275da546</RegisteredPackageID>
@@ -28,13 +28,13 @@
     <AppXManifest Include="C:\Users\le1cool\Documents\Projet\IHM\DicoLexique\DicoLexique\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-05-10T12:21:08.353</Modified>
+      <Modified>2017-05-10T12:48:11.377</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\le1cool\Documents\Projet\IHM\DicoLexique\DicoLexique\bin\x86\Debug\DicoLexique.exe">
       <PackagePath>entrypoint\DicoLexique.exe</PackagePath>
-      <Modified>2017-05-10T12:21:06.284</Modified>
+      <Modified>2017-05-10T12:48:09.708</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\le1cool\.nuget\packages\Microsoft.CSharp\4.0.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -488,7 +488,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\le1cool\Documents\Projet\IHM\DicoLexique\DicoLexique\bin\x86\Debug\DicoLexique.xr.xml">
       <PackagePath>DicoLexique.xr.xml</PackagePath>
-      <Modified>2017-05-10T12:21:06.034</Modified>
+      <Modified>2017-05-10T12:48:09.513</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -496,11 +496,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\le1cool\Documents\Projet\IHM\DicoLexique\DicoLexique\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2017-05-10T12:21:08.035</Modified>
+      <Modified>2017-05-10T12:48:11.162</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\le1cool\Documents\Projet\IHM\DicoLexique\DicoLexique\bin\x86\Debug\Core\DicoLexique.exe">
       <PackagePath>DicoLexique.exe</PackagePath>
-      <Modified>2017-05-10T12:21:08.341</Modified>
+      <Modified>2017-05-10T12:48:11.372</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

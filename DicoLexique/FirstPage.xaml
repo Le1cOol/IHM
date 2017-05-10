@@ -22,6 +22,8 @@
             <RowDefinition Height="3*"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
+        <Rectangle Fill="CadetBlue" VerticalAlignment="Stretch" 
+                   Grid.ColumnSpan="3" Margin="0,0,0,0"/>
         <TextBlock x:Name="Txt_title" Text="DicoLexique"
                    Grid.Column="0" Grid.Row="0"
                    HorizontalAlignment="Center" VerticalAlignment="Center" />
@@ -31,11 +33,11 @@
         <Button x:Name="Btn_yes" Content="OUI" 
                 Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="3"
                 HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
-                Margin="20,20,20,20"/>
+                Margin="20,20,20,20" Click="Btn_yes_Click"/>
         <Button x:Name="Btn_no" Content="NON" 
                 Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="3"
                 HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
-                Margin="20,20,20,20"/>
+                Margin="20,20,20,20" Click="Btn_no_Click"/>
         <Button x:Name="Btn_micro" Content="Microphone" 
                 Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="3"
                 HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
