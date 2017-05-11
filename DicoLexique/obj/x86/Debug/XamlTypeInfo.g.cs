@@ -132,19 +132,21 @@ namespace DicoLexique.DicoLexique_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[5];
-            _typeNameTable[0] = "DicoLexique.MainPage";
+            _typeNameTable = new string[6];
+            _typeNameTable[0] = "DicoLexique.BlankPage1";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[3] = "DicoLexique.Search_NV";
-            _typeNameTable[4] = "DicoLexique.Search_V";
+            _typeNameTable[3] = "DicoLexique.MainPage";
+            _typeNameTable[4] = "DicoLexique.Search_NV";
+            _typeNameTable[5] = "DicoLexique.Search_V";
 
-            _typeTable = new global::System.Type[5];
-            _typeTable[0] = typeof(global::DicoLexique.MainPage);
+            _typeTable = new global::System.Type[6];
+            _typeTable[0] = typeof(global::DicoLexique.BlankPage1);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[3] = typeof(global::DicoLexique.Search_NV);
-            _typeTable[4] = typeof(global::DicoLexique.Search_V);
+            _typeTable[3] = typeof(global::DicoLexique.MainPage);
+            _typeTable[4] = typeof(global::DicoLexique.Search_NV);
+            _typeTable[5] = typeof(global::DicoLexique.Search_V);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -179,9 +181,10 @@ namespace DicoLexique.DicoLexique_XamlTypeInfo
             return -1;
         }
 
-        private object Activate_0_MainPage() { return new global::DicoLexique.MainPage(); }
-        private object Activate_3_Search_NV() { return new global::DicoLexique.Search_NV(); }
-        private object Activate_4_Search_V() { return new global::DicoLexique.Search_V(); }
+        private object Activate_0_BlankPage1() { return new global::DicoLexique.BlankPage1(); }
+        private object Activate_3_MainPage() { return new global::DicoLexique.MainPage(); }
+        private object Activate_4_Search_NV() { return new global::DicoLexique.Search_NV(); }
+        private object Activate_5_Search_V() { return new global::DicoLexique.Search_V(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -193,9 +196,9 @@ namespace DicoLexique.DicoLexique_XamlTypeInfo
             switch (typeIndex)
             {
 
-            case 0:   //  DicoLexique.MainPage
+            case 0:   //  DicoLexique.BlankPage1
                 userType = new global::DicoLexique.DicoLexique_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_0_MainPage;
+                userType.Activator = Activate_0_BlankPage1;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -208,16 +211,23 @@ namespace DicoLexique.DicoLexique_XamlTypeInfo
                 xamlType = new global::DicoLexique.DicoLexique_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 3:   //  DicoLexique.Search_NV
+            case 3:   //  DicoLexique.MainPage
                 userType = new global::DicoLexique.DicoLexique_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_3_Search_NV;
+                userType.Activator = Activate_3_MainPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 4:   //  DicoLexique.Search_V
+            case 4:   //  DicoLexique.Search_NV
                 userType = new global::DicoLexique.DicoLexique_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_4_Search_V;
+                userType.Activator = Activate_4_Search_NV;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 5:   //  DicoLexique.Search_V
+                userType = new global::DicoLexique.DicoLexique_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_5_Search_V;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

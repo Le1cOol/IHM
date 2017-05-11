@@ -22,9 +22,34 @@ namespace DicoLexique
     /// </summary>
     public sealed partial class Search_V : Page
     {
+        String vnv;
         public Search_V()
         {
             this.InitializeComponent();
+            this.lepivot.SelectionChanged += Lepivot_SelectionChanged;
+        }
+
+        private void Lepivot_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            this.MainFrame = new F1();
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            vnv = e.Parameter as String;
+            if (this.vnv.Equals("true"))
+            {
+
+            }
+            else
+            {
+                this.Btn_micro.SetValue(Grid.RowSpanProperty, 1);
+                this.Btn_micro.SetValue(Grid.RowProperty, 2);
+                this.Btn_micro_m.SetValue(Grid.RowSpanProperty, 1);
+                this.Btn_micro_m.SetValue(Grid.RowProperty, 2);
+                this.gridPivot.SetValue(Grid.RowSpanProperty, 2);
+            }
+            base.OnNavigatedTo(e);
         }
     }
 }

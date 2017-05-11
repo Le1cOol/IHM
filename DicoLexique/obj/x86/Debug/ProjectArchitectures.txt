@@ -1,1 +1,1 @@
-C:\Users\le1cool\Documents\Projet\IHM\DicoLexique\DicoLexique\DicoLexique.csproj;x86
+C:\Users\Clément\Documents\IMIE\IHM\IHM\DicoLexique\DicoLexique.csproj;x86

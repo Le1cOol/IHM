@@ -8,6 +8,25 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Margin="45,81.333,0,0" Grid.Row="1" Grid.RowSpan="2"/>
+        <Button x:Name="button" Content="Button" Grid.Column="2" HorizontalAlignment="Left" Margin="0,81.333,0,0" Grid.Row="1" VerticalAlignment="Top" Grid.RowSpan="2"/>
+        <Button x:Name="button1" Content="braille" Grid.Column="1" HorizontalAlignment="Stretch" Grid.Row="5" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="150" Grid.RowSpan="2" Width="154"/>
+        <Button x:Name="button2" Content="micro" HorizontalAlignment="Stretch"  Grid.Row="5" VerticalAlignment="Stretch" Height="150" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
     </Grid>
 </Page>
