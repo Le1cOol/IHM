@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DicoLexique.Models
 {
-    public class Dico
+    public class Dictionary
     {
     }
 }
