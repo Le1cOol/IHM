@@ -95,18 +95,23 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="BlankPage1.xaml.cs">
-      <DependentUpon>BlankPage1.xaml</DependentUpon>
+    <Compile Include="TemplateVocal.xaml.cs">
+      <DependentUpon>TemplateVocal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TemplateBase.xaml.cs">
+      <DependentUpon>TemplateBase.xaml</DependentUpon>
     </Compile>
     <Compile Include="FirstPage.xaml.cs">
       <DependentUpon>FirstPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\Definition.cs" />
+    <Compile Include="Models\Dictionary.cs" />
+    <Compile Include="Models\Favoris.cs" />
+    <Compile Include="Models\Settings.cs" />
+    <Compile Include="Models\Word.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Search_NV.xaml.cs">
-      <DependentUpon>Search_NV.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Search_V.xaml.cs">
-      <DependentUpon>Search_V.xaml</DependentUpon>
+    <Compile Include="TemplateBraille.xaml.cs">
+      <DependentUpon>TemplateBraille.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -130,7 +135,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="BlankPage1.xaml">
+    <Page Include="TemplateVocal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TemplateBase.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -142,11 +151,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Search_NV.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Search_V.xaml">
+    <Page Include="TemplateBraille.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
