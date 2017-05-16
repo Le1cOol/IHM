@@ -39,13 +39,13 @@
                    HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch">
 
                 <PivotItem Header="Accueil">
-                    <Page x:Name="Accueil"/>
+                    <Grid x:Name="Accueil"/>
                 </PivotItem>
                 <PivotItem Header="Favoris">
-                    <Page x:Name="Favoris"/>
+                    <Grid x:Name="Favoris"/>
                 </PivotItem>
                 <PivotItem Header="Reglages">
-                    <Page x:Name="Reglages"/>
+                    <Grid x:Name="Reglages"/>
                 </PivotItem>
             </Pivot>
         </Grid>

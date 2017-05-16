@@ -25,13 +25,15 @@ namespace DicoLexique
         public TemplateBase()
         {
             this.InitializeComponent();
+            this.lepivot.SelectionChanged += Lepivot_SelectionChanged;
+            this.Accueil.Children.Add(new Accueil());
+            this.Favoris.Children.Add(new Favoris());
+            this.Reglages.Children.Add(new Reglages());
         }
 
         private void Lepivot_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            this.Accueil = new Accueil();
-            this.Favoris = new Favoris();
-            this.Reglages = new Reglages();
+
         }
     }
 }
