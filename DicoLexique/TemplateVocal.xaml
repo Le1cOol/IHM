@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="DicoLexique.BlankPage1"
+    x:Class="DicoLexique.TemplateVocal"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:DicoLexique"
@@ -8,6 +8,48 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+
+        <Rectangle Fill="CadetBlue" VerticalAlignment="Stretch"
+                   Grid.ColumnSpan="3" Margin="0,0,0,0"/>
+        <TextBlock x:Name="Txt_title" Text="DicoLexique"
+                   Grid.Column="0" Grid.Row="0"
+                   HorizontalAlignment="Center" VerticalAlignment="Center" />
+
+        <Grid Name="gridPivot" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="15*"/>
+            </Grid.RowDefinitions>
+
+            <Pivot Name="lepivot" Grid.Row="1" Grid.ColumnSpan="3"
+                   HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch">
+
+                <PivotItem Header="Accueil">
+                    <Page x:Name="Accueil"/>
+                </PivotItem>
+                <PivotItem Header="Favoris">
+                    <Page x:Name="Favoris"/>
+                </PivotItem>
+                <PivotItem Header="Reglages">
+                    <Page x:Name="Reglages"/>
+                </PivotItem>
+            </Pivot>
+        </Grid>
+        <Button x:Name="Btn_micro" Content="Microphone" Grid.Row="2" Grid.ColumnSpan="3"
+                HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
     </Grid>
 </Page>

@@ -20,11 +20,18 @@ namespace DicoLexique
     /// <summary>
     /// Une page vide peut être utilisée seule ou constituer une page de destination au sein d'un frame.
     /// </summary>
-    public sealed partial class BlankPage2 : Page
+    public sealed partial class TemplateBase : Page
     {
-        public BlankPage2()
+        public TemplateBase()
         {
             this.InitializeComponent();
+        }
+
+        private void Lepivot_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            this.Accueil = new Accueil();
+            this.Favoris = new Favoris();
+            this.Reglages = new Reglages();
         }
     }
 }

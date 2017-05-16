@@ -29,12 +29,12 @@ namespace DicoLexique
 
         private void Btn_yes_Click(object sender, RoutedEventArgs e)
         {
-            (Window.Current.Content as Frame).Navigate(typeof(Search_NV),"true");
+            (Window.Current.Content as Frame).Navigate(typeof(TemplateBraille),"true");
         }
 
         private void Btn_no_Click(object sender, RoutedEventArgs e)
         {
-            (Window.Current.Content as Frame).Navigate(typeof(Search_V),"false");
+            (Window.Current.Content as Frame).Navigate(typeof(TemplateVocal),"false");
         }
     }
 }

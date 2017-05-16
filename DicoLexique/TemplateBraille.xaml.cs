@@ -20,10 +20,10 @@ namespace DicoLexique
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class Search_V : Page
+    public sealed partial class TemplateBraille : Page
     {
         String vnv;
-        public Search_V()
+        public TemplateBraille()
         {
             this.InitializeComponent();
             this.lepivot.SelectionChanged += Lepivot_SelectionChanged;
@@ -31,24 +31,26 @@ namespace DicoLexique
 
         private void Lepivot_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            this.MainFrame = new F1();
+            this.Accueil = new Accueil();
+            this.Favoris = new Favoris();
+            this.Reglages = new Reglages();
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            vnv = e.Parameter as String;
-            if (this.vnv.Equals("true"))
-            {
+            //vnv = e.Parameter as String;
+            //if (this.vnv.Equals("true"))
+            //{
 
-            }
-            else
-            {
-                this.Btn_micro.SetValue(Grid.RowSpanProperty, 1);
-                this.Btn_micro.SetValue(Grid.RowProperty, 2);
-                this.Btn_micro_m.SetValue(Grid.RowSpanProperty, 1);
-                this.Btn_micro_m.SetValue(Grid.RowProperty, 2);
-                this.gridPivot.SetValue(Grid.RowSpanProperty, 2);
-            }
+            //}
+            //else
+            //{
+            //    this.Btn_micro.SetValue(Grid.RowSpanProperty, 1);
+            //    this.Btn_micro.SetValue(Grid.RowProperty, 2);
+            //    this.Btn_micro_m.SetValue(Grid.RowSpanProperty, 1);
+            //    this.Btn_micro_m.SetValue(Grid.RowProperty, 2);
+            //    this.gridPivot.SetValue(Grid.RowSpanProperty, 2);
+            //}
             base.OnNavigatedTo(e);
         }
     }
