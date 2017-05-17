@@ -29,6 +29,9 @@ namespace DicoLexique
         {
             this.settings = s;
             this.InitializeComponent();
+            this.reglageMicroBox.IsChecked = settings.Micro;
+            this.reglageBrailleBox.IsChecked = settings.ModeAveugle;
+            this.reglageSonBox.IsChecked = settings.Sound;
         }
 
         private void reglageMicroBox_Checked(object sender, RoutedEventArgs e)
@@ -40,6 +43,7 @@ namespace DicoLexique
             else
             {
                 this.settings.Micro = false;
+                (Window.Current.Content as Frame).Navigate(typeof(TemplateBase), settings);
             }
         }
 
@@ -50,11 +54,13 @@ namespace DicoLexique
                 this.settings.ModeAveugle = true;
                 this.reglageMicroBox.IsChecked = true;
                 this.reglageMicroBox.IsEnabled = false;
+                (Window.Current.Content as Frame).Navigate(typeof(TemplateBraille), settings);
             }
             else
             {
                 this.settings.ModeAveugle = false;
                 this.reglageMicroBox.IsEnabled = true;
+                (Window.Current.Content as Frame).Navigate(typeof(TemplateVocal), settings);
             }
         }
 

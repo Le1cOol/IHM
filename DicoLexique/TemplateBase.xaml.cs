@@ -38,5 +38,11 @@ namespace DicoLexique
         {
 
         }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            this.settings = e.Parameter as Settings;
+            base.OnNavigatedTo(e);
+        }
     }
 }
