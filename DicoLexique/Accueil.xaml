@@ -15,15 +15,22 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="2*"/>
-            <RowDefinition Height="8*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="6*"/>
         </Grid.RowDefinitions>
 
-        <TextBox x:Name="Txt_Search" Text="Recherche" Grid.ColumnSpan="2"
+        <TextBox x:Name="Txt_Search" PlaceholderText="Recherche" Grid.ColumnSpan="2"
                  VerticalAlignment="Stretch" Margin="0,0,0,0"/>
-        <Button x:Name="Btn_Search" Content="Button" Grid.Column="2" 
+        <Button x:Name="Btn_Search" Content="Rechercher" Grid.Column="2" 
                 HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+
         <ListView x:Name="Lv_Histo" Grid.Row="1" Grid.ColumnSpan="3" 
                   HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+        <RichTextBlock Grid.Row="1" Grid.ColumnSpan="3">
+            <Paragraph>
+                <Run Text="Définition"/>
+            </Paragraph>
+        </RichTextBlock>
 
     </Grid>
 </Page>
