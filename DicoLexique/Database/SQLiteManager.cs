@@ -31,7 +31,7 @@ namespace DicoLexique.Database
         #endregion
 
         #region Constructors
-        public SqliteManager()
+        public SQLiteManager()
         {
             connection = new SQLiteConnection(new SQLite.Net.Platform.WinRT.SQLitePlatformWinRT(),
             ApplicationData.Current.LocalFolder.Path + DB_NAME);

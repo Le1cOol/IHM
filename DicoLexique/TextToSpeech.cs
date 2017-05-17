@@ -22,7 +22,6 @@ namespace TextToSpeechClassLibrary
 
         #region Variables
         MediaPlayerManager playerManager;
-        CommandWorker.CommandWorker commandWorker;
         List<ManualResetEvent> resetEvents;
         #endregion
 
@@ -33,7 +32,6 @@ namespace TextToSpeechClassLibrary
 
         private TextToSpeech()
         {
-            commandWorker = new CommandWorker.CommandWorker(TEXT_TO_SPEECH_WORKER);
             resetEvents = new List<ManualResetEvent>();
         }
 
@@ -225,7 +223,7 @@ namespace TextToSpeechClassLibrary
 
             public void Slicer(String[] spliters = null)
             {
-                if (spliters is null)
+                if (spliters == null)
                 {
                     spliters = new String[1];
                     spliters[0] = " ";
