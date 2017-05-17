@@ -98,12 +98,15 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Database\SQLiteManager.cs" />
     <Compile Include="Favoris.xaml.cs">
       <DependentUpon>Favoris.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\Base\EntityBase.cs" />
     <Compile Include="Reglages.xaml.cs">
       <DependentUpon>Reglages.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SpeechToText.cs" />
     <Compile Include="TemplateVocal.xaml.cs">
       <DependentUpon>TemplateVocal.xaml</DependentUpon>
     </Compile>
@@ -122,6 +125,7 @@
     <Compile Include="TemplateBraille.xaml.cs">
       <DependentUpon>TemplateBraille.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TextToSpeech.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -172,6 +176,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="SQLite.UWP.2015, Version=3.18.0">
+      <Name>SQLite for Universal Windows Platform</Name>
+    </SDKReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
