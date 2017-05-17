@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DicoLexique.Models;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,13 +23,15 @@ namespace DicoLexique
     /// </summary>
     public sealed partial class TemplateVocal : Page
     {
+        private Settings settings;
+
         public TemplateVocal()
         {
             this.InitializeComponent();
             this.lepivot.SelectionChanged += Lepivot_SelectionChanged;
-            this.Accueil.Children.Add(new Accueil());
-            this.Favoris.Children.Add(new Favoris());
-            this.Reglages.Children.Add(new Reglages());
+            this.Accueil.Children.Add(new Accueil(settings));
+            this.Favoris.Children.Add(new Favoris(settings));
+            this.Reglages.Children.Add(new Reglages(settings));
         }
         
         private void Lepivot_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -36,5 +39,10 @@ namespace DicoLexique
 
         }
 
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            this.settings = e.Parameter as Settings;
+            base.OnNavigatedTo(e);
+        }
     }
 }

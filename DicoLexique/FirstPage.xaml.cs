@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DicoLexique.Models;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -29,12 +30,12 @@ namespace DicoLexique
 
         private void Btn_yes_Click(object sender, RoutedEventArgs e)
         {
-            (Window.Current.Content as Frame).Navigate(typeof(TemplateBraille),"true");
+            (Window.Current.Content as Frame).Navigate(typeof(TemplateBraille), new Settings(true, true, true));
         }
 
         private void Btn_no_Click(object sender, RoutedEventArgs e)
         {
-            (Window.Current.Content as Frame).Navigate(typeof(TemplateVocal),"false");
+            (Window.Current.Content as Frame).Navigate(typeof(TemplateVocal), new Settings(false, true, true));
         }
     }
 }

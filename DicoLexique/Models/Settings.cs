@@ -3,20 +3,34 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Xaml.Navigation;
 
 namespace DicoLexique.Models
 {
     public class Settings
     {
-        private Boolean micro;
 
+        #region StaticVariables
+        #endregion
+
+        #region Constants
+        #endregion
+
+        #region Variables
+        #endregion
+
+        #region Attributs
+        private Boolean modeAveugle;
+        private Boolean sound;
+        private Boolean micro;
+        #endregion
+
+        #region Properties
         public Boolean Micro
         {
             get { return micro; }
             set { micro = value; }
         }
-
-        private Boolean sound;
 
         public Boolean Sound
         {
@@ -24,13 +38,36 @@ namespace DicoLexique.Models
             set { sound = value; }
         }
 
-        private Boolean modeAveugle;
-
         public Boolean ModeAveugle
         {
             get { return modeAveugle; }
             set { modeAveugle = value; }
         }
+        #endregion
+
+        #region Constructors
+        public Settings()
+        {
+
+        }
+        public Settings( bool modeAveugle, bool micro, bool sound)
+        {
+            this.modeAveugle = modeAveugle;
+            this.micro = micro;
+            this.sound = sound;
+        }
+
+ 
+        #endregion
+
+        #region StaticFunctions
+        #endregion
+
+        #region Functions
+        #endregion
+
+        #region Events
+        #endregion
 
 
 

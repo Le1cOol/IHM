@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DicoLexique.Models;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,8 +23,11 @@ namespace DicoLexique
     /// </summary>
     public sealed partial class Accueil : Page
     {
-        public Accueil()
+        private Settings settings;
+
+        public Accueil(Settings s)
         {
+            this.settings = s;
             this.InitializeComponent();
         }
     }
